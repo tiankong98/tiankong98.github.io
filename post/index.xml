@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on 绚烂的星星@cilia</title>
+    <link>https://tiankong98.github.io/post/</link>
+    <description>Recent content in Posts on 绚烂的星星@cilia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright> cilia copyright.</copyright>
+    <lastBuildDate>Fri, 25 Mar 2022 16:04:54 +0800</lastBuildDate><atom:link href="https://tiankong98.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BootStrap学习笔记</title>
+      <link>https://tiankong98.github.io/post/bootstrap%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Fri, 25 Mar 2022 16:04:54 +0800</pubDate>
+      
+      <guid>https://tiankong98.github.io/post/bootstrap%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>Bootstrap 基本框架 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt;  &amp;lt;head&amp;gt;  &amp;lt;meta charset=&amp;#34;utf-8&amp;#34;&amp;gt;  &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;IE=edge&amp;#34;&amp;gt;  &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1&amp;#34;&amp;gt;  &amp;lt;!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags --&amp;gt;  &amp;lt;title&amp;gt;Bootstrap 101 Template&amp;lt;/title&amp;gt;   &amp;lt;!-- Bootstrap --&amp;gt;  &amp;lt;link href=&amp;#34;css/bootstrap.min.css&amp;#34; rel=&amp;#34;stylesheet&amp;#34;&amp;gt;   &amp;lt;!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --&amp;gt;  &amp;lt;!</description>
+    </item>
+    
+    <item>
+      <title>JavaScript学习笔记</title>
+      <link>https://tiankong98.github.io/post/javascript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Fri, 25 Mar 2022 15:58:53 +0800</pubDate>
+      
+      <guid>https://tiankong98.github.io/post/javascript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>Javascript基础 简单介绍 变量 声明变量 变量赋值 变量作用域 全局变量 数据类型 类型转换 基本运算 算术运算 逻辑运算 关系运算 赋值运算 程序结构 if else switch default while do/while for for/in label break continue try/catch/finally throw 数组 for forEach keys 栈操作 队列炒作 删除元素 添加元素 截取数组 数组排序 数组转换 元素定位 检测数组 遍历数组 BOM 、DOM操作 元素 事件处理 </description>
+    </item>
+    
+    <item>
+      <title>CSS学习笔记</title>
+      <link>https://tiankong98.github.io/post/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Thu, 24 Mar 2022 15:55:54 +0800</pubDate>
+      
+      <guid>https://tiankong98.github.io/post/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>CSS基础 基本用法 样式 基本结构： 选择器：重点
+声明之间用封号隔开
+属性和属性值之间用冒号
+样式表 内部、外部样式表
+代码注释和格式化 /**/
+继承性 父元素定义的样式会被子元素继承 主要是字体、颜色和文本属性具有继承性。
+层叠性 不同样式作用同一个对象时 ，由于声明同一个属性，会发生优先级。
+样式表的优先级：
+标签选择器：优先级加权值为1；
+伪元素或伪对象选择器：优先级加权值为1；
+类选择器：优先值加权值为10；
+属性选择器：优先级加权值为10；
+ID选择器：优先级加权值为100。
+选择器 标签选择器 通过html标签名设置选择器。
+类选择器 个性化定制。
+点号+类名
+ID选择器 #ID
+标签#ID
+包含选择器 通过空格 定义包含
+如 .class a{}
+子选择器 父选择器&amp;gt;子选择器 包含选择器范围更大
+相邻选择器 与前一选择器相邻的选择器
+兄弟选择器 匹配前一选择器后面的所有选择器
+属性选择器 [属性]
+结构伪类选择器 文档结构中匹配特定元素
+否定伪类选择器 E:not(s)
+状态伪类选择器 目标伪类选择器 动态伪类选择器 伪对象选择器 CSS文本 字体样式 字体类型、大小和颜色 Font font-size(通用字体默认16px) color
+粗体、斜体和下划线 Font-weight
+Font-style
+text-decoration
+变体和大小写 Font-variant text-transform
+文本格式 文本对齐 Text-align vertical-align</description>
+    </item>
+    
+    <item>
+      <title>HTML学习笔记</title>
+      <link>https://tiankong98.github.io/post/html%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Wed, 23 Mar 2022 15:56:53 +0800</pubDate>
+      
+      <guid>https://tiankong98.github.io/post/html%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>WEB前端之HTML 1. HTML基础 1.1新建文档 空白文档 使用&amp;lt;!doctype html&amp;gt;定义文档类型
+即网页文档的基本结构，
+头部区需添加相关信息，
+网页内容添加 文本内容，外部引用内容，各种标签标识内容。
+如： 中添加文字
+​ 标签自我介绍
+1.2头部信息 网页标题 新建文档（head,body）
+Head中使用title,
+Title作用：
+定义标题栏的标题，
+定义收藏夹的列表标题，
+定义搜索结果的列表标题（搜索引擎依据）
+Title和H1比较：
+Title： 网页标题，搜索检索，唯一且必要，head区域
+H 1: 文档标题，用户浏览，不唯一不必要，body区域
+网页元信息 Meta标签 （meta.html） 元信息：不是提供给用户的信息，用户不可见
+提供浏览器解析，方便搜索引擎对页面信息的检索。
+meta类型：
+http-equiv(equivalence):向浏览器传有用的信息，帮助浏览器正确地显示内容。类似http头部消息，先被浏览器获取
+Name:描述网页元信息，存在与网页中，晚于http-equiv解析。
+文档视口 (viewport.html) 分辨率不同，显示不同
+Viewport: 可视区域
+移动前端： 设备浏览器 显示页面内容的屏幕区域
+Dip(device-independent pixel,设备逻辑像素)
+CSS像素
+Visual viewport （视觉视口） 物理像素
+Ideal viewport（理想视口） 逻辑像素（分辨率）
+Layout viewport（布局视口） CSS像素
+视口标签语法：
+height=device-heigth,
+initial-scale=1.0,初始缩放比率，逻辑像素和CSS像素一致
+minimum-scale=1,
+maximum-scale=1,
+user-scalable=no”&amp;gt;
+1.3 基本结构 定义文档结构 Html head(meta title) body(h p ul li)</description>
+    </item>
+    
+  </channel>
+</rss>

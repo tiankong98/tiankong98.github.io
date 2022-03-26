@@ -1,0 +1,6168 @@
+<!DOCTYPE html>
+<html><head>
+<title>CSS学习笔记</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta property="og:title" content="CSS学习笔记" />
+<meta property="og:description" content="CSS基础 基本用法 样式 基本结构： 选择器：重点
+声明之间用封号隔开
+属性和属性值之间用冒号
+样式表 内部、外部样式表
+代码注释和格式化 /**/
+继承性 父元素定义的样式会被子元素继承 主要是字体、颜色和文本属性具有继承性。
+层叠性 不同样式作用同一个对象时 ，由于声明同一个属性，会发生优先级。
+样式表的优先级：
+标签选择器：优先级加权值为1；
+伪元素或伪对象选择器：优先级加权值为1；
+类选择器：优先值加权值为10；
+属性选择器：优先级加权值为10；
+ID选择器：优先级加权值为100。
+选择器 标签选择器 通过html标签名设置选择器。
+类选择器 个性化定制。
+点号&#43;类名
+ID选择器 #ID
+标签#ID
+包含选择器 通过空格 定义包含
+如 .class a{}
+子选择器 父选择器&gt;子选择器 包含选择器范围更大
+相邻选择器 与前一选择器相邻的选择器
+兄弟选择器 匹配前一选择器后面的所有选择器
+属性选择器 [属性]
+结构伪类选择器 文档结构中匹配特定元素
+否定伪类选择器 E:not(s)
+状态伪类选择器 目标伪类选择器 动态伪类选择器 伪对象选择器 CSS文本 字体样式 字体类型、大小和颜色 Font font-size(通用字体默认16px) color
+粗体、斜体和下划线 Font-weight
+Font-style
+text-decoration
+变体和大小写 Font-variant text-transform
+文本格式 文本对齐 Text-align vertical-align" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tiankong98.github.io/post/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-03-24T15:55:54+08:00" />
+<meta property="article:modified_time" content="2022-03-24T15:55:54+08:00" /><meta property="og:site_name" content="My Blog" />
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CSS学习笔记"/>
+<meta name="twitter:description" content="CSS基础 基本用法 样式 基本结构： 选择器：重点
+声明之间用封号隔开
+属性和属性值之间用冒号
+样式表 内部、外部样式表
+代码注释和格式化 /**/
+继承性 父元素定义的样式会被子元素继承 主要是字体、颜色和文本属性具有继承性。
+层叠性 不同样式作用同一个对象时 ，由于声明同一个属性，会发生优先级。
+样式表的优先级：
+标签选择器：优先级加权值为1；
+伪元素或伪对象选择器：优先级加权值为1；
+类选择器：优先值加权值为10；
+属性选择器：优先级加权值为10；
+ID选择器：优先级加权值为100。
+选择器 标签选择器 通过html标签名设置选择器。
+类选择器 个性化定制。
+点号&#43;类名
+ID选择器 #ID
+标签#ID
+包含选择器 通过空格 定义包含
+如 .class a{}
+子选择器 父选择器&gt;子选择器 包含选择器范围更大
+相邻选择器 与前一选择器相邻的选择器
+兄弟选择器 匹配前一选择器后面的所有选择器
+属性选择器 [属性]
+结构伪类选择器 文档结构中匹配特定元素
+否定伪类选择器 E:not(s)
+状态伪类选择器 目标伪类选择器 动态伪类选择器 伪对象选择器 CSS文本 字体样式 字体类型、大小和颜色 Font font-size(通用字体默认16px) color
+粗体、斜体和下划线 Font-weight
+Font-style
+text-decoration
+变体和大小写 Font-variant text-transform
+文本格式 文本对齐 Text-align vertical-align"/>
+
+
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="https://tiankong98.github.io/scss/journal.min.f4a8de07567a2d29619e0711662ef6251e3e59b642079f99490f654abf89a3c4.css" integrity="sha256-9KjeB1Z6LSlhngcRZi72JR4&#43;WbZCB5&#43;ZSQ9lSr&#43;Jo8Q=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://tiankong98.github.io/scss/dark-mode.min.eeb8040aa9333250b7fec770f950bfe8ba9b18a5eeeaf2dfef61d84d3956f625.css" integrity="sha256-7rgECqkzMlC3/sdw&#43;VC/6LqbGKXu6vLf72HYTTlW9iU=" media="screen">
+
+
+<script src="/vendor/js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons");
+</script>
+
+
+
+
+
+
+  <script src="/js/toc.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>console.log("Hello from 'layouts/partials/extended_head.html'")</script>
+
+</head>
+<body>
+    	<div id="app"><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://tiankong98.github.io/">
+    
+        <div class="nav-title">
+            绚烂的星星@cilia
+        </div>
+        
+        <div class="nav-subtitle">
+            日记一事.
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+
+  by <a>cilia</a>
+<br>
+  <a>小小星辰 无限乾坤</a>
+<br>
+  <a>1350865456@qq.com</a>
+<br>
+
+&copy;
+	
+	 cilia copyright.
+	
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#css%e5%9f%ba%e7%a1%80" onclick="onNavClick(`#css基础-nav`)" id="css基础-nav">
+									CSS基础
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%9f%ba%e6%9c%ac%e7%94%a8%e6%b3%95" onclick="onNavClick(`#基本用法-nav`)" id="基本用法-nav">
+									基本用法
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e6%a0%b7%e5%bc%8f" onclick="onNavClick(`#样式-nav`)" id="样式-nav">
+									样式
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%a0%b7%e5%bc%8f%e8%a1%a8" onclick="onNavClick(`#样式表-nav`)" id="样式表-nav">
+									样式表
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e4%bb%a3%e7%a0%81%e6%b3%a8%e9%87%8a%e5%92%8c%e6%a0%bc%e5%bc%8f%e5%8c%96" onclick="onNavClick(`#代码注释和格式化-nav`)" id="代码注释和格式化-nav">
+									代码注释和格式化
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%bb%a7%e6%89%bf%e6%80%a7" onclick="onNavClick(`#继承性-nav`)" id="继承性-nav">
+									继承性
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%b1%82%e5%8f%a0%e6%80%a7" onclick="onNavClick(`#层叠性-nav`)" id="层叠性-nav">
+									层叠性
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e9%80%89%e6%8b%a9%e5%99%a8" onclick="onNavClick(`#选择器-nav`)" id="选择器-nav">
+									选择器
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e6%a0%87%e7%ad%be%e9%80%89%e6%8b%a9%e5%99%a8" onclick="onNavClick(`#标签选择器-nav`)" id="标签选择器-nav">
+									标签选择器
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%b1%bb%e9%80%89%e6%8b%a9%e5%99%a8" onclick="onNavClick(`#类选择器-nav`)" id="类选择器-nav">
+									类选择器
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#id%e9%80%89%e6%8b%a9%e5%99%a8" onclick="onNavClick(`#id选择器-nav`)" id="id选择器-nav">
+									ID选择器
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%8c%85%e5%90%ab%e9%80%89%e6%8b%a9%e5%99%a8" onclick="onNavClick(`#包含选择器-nav`)" id="包含选择器-nav">
+									包含选择器
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%ad%90%e9%80%89%e6%8b%a9%e5%99%a8" onclick="onNavClick(`#子选择器-nav`)" id="子选择器-nav">
+									子选择器
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%9b%b8%e9%82%bb%e9%80%89%e6%8b%a9%e5%99%a8" onclick="onNavClick(`#相邻选择器-nav`)" id="相邻选择器-nav">
+									相邻选择器
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%85%84%e5%bc%9f%e9%80%89%e6%8b%a9%e5%99%a8" onclick="onNavClick(`#兄弟选择器-nav`)" id="兄弟选择器-nav">
+									兄弟选择器
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%b1%9e%e6%80%a7%e9%80%89%e6%8b%a9%e5%99%a8" onclick="onNavClick(`#属性选择器-nav`)" id="属性选择器-nav">
+									属性选择器
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%bb%93%e6%9e%84%e4%bc%aa%e7%b1%bb%e9%80%89%e6%8b%a9%e5%99%a8" onclick="onNavClick(`#结构伪类选择器-nav`)" id="结构伪类选择器-nav">
+									结构伪类选择器
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%90%a6%e5%ae%9a%e4%bc%aa%e7%b1%bb%e9%80%89%e6%8b%a9%e5%99%a8" onclick="onNavClick(`#否定伪类选择器-nav`)" id="否定伪类选择器-nav">
+									否定伪类选择器
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%8a%b6%e6%80%81%e4%bc%aa%e7%b1%bb%e9%80%89%e6%8b%a9%e5%99%a8" onclick="onNavClick(`#状态伪类选择器-nav`)" id="状态伪类选择器-nav">
+									状态伪类选择器
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%9b%ae%e6%a0%87%e4%bc%aa%e7%b1%bb%e9%80%89%e6%8b%a9%e5%99%a8" onclick="onNavClick(`#目标伪类选择器-nav`)" id="目标伪类选择器-nav">
+									目标伪类选择器
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%8a%a8%e6%80%81%e4%bc%aa%e7%b1%bb%e9%80%89%e6%8b%a9%e5%99%a8" onclick="onNavClick(`#动态伪类选择器-nav`)" id="动态伪类选择器-nav">
+									动态伪类选择器
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e4%bc%aa%e5%af%b9%e8%b1%a1%e9%80%89%e6%8b%a9%e5%99%a8" onclick="onNavClick(`#伪对象选择器-nav`)" id="伪对象选择器-nav">
+									伪对象选择器
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#css%e6%96%87%e6%9c%ac" onclick="onNavClick(`#css文本-nav`)" id="css文本-nav">
+									CSS文本
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%ad%97%e4%bd%93%e6%a0%b7%e5%bc%8f" onclick="onNavClick(`#字体样式-nav`)" id="字体样式-nav">
+									字体样式
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%ad%97%e4%bd%93%e7%b1%bb%e5%9e%8b%e5%a4%a7%e5%b0%8f%e5%92%8c%e9%a2%9c%e8%89%b2" onclick="onNavClick(`#字体类型大小和颜色-nav`)" id="字体类型大小和颜色-nav">
+									字体类型、大小和颜色
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%b2%97%e4%bd%93%e6%96%9c%e4%bd%93%e5%92%8c%e4%b8%8b%e5%88%92%e7%ba%bf" onclick="onNavClick(`#粗体斜体和下划线-nav`)" id="粗体斜体和下划线-nav">
+									粗体、斜体和下划线
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%8f%98%e4%bd%93%e5%92%8c%e5%a4%a7%e5%b0%8f%e5%86%99" onclick="onNavClick(`#变体和大小写-nav`)" id="变体和大小写-nav">
+									变体和大小写
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e6%96%87%e6%9c%ac%e6%a0%bc%e5%bc%8f" onclick="onNavClick(`#文本格式-nav`)" id="文本格式-nav">
+									文本格式
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e6%96%87%e6%9c%ac%e5%af%b9%e9%bd%90" onclick="onNavClick(`#文本对齐-nav`)" id="文本对齐-nav">
+									文本对齐
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%96%87%e6%9c%ac%e9%97%b4%e8%b7%9d" onclick="onNavClick(`#文本间距-nav`)" id="文本间距-nav">
+									文本间距
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%a1%8c%e9%ab%98" onclick="onNavClick(`#行高-nav`)" id="行高-nav">
+									行高
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%bc%a9%e8%bf%9b" onclick="onNavClick(`#缩进-nav`)" id="缩进-nav">
+									缩进
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%8d%a2%e8%a1%8c" onclick="onNavClick(`#换行-nav`)" id="换行-nav">
+									换行
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e4%b9%a6%e5%86%99%e6%a8%a1%e5%bc%8f" onclick="onNavClick(`#书写模式-nav`)" id="书写模式-nav">
+									书写模式
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%ae%9a%e4%b9%89%e6%a8%a1%e5%bc%8f" onclick="onNavClick(`#定义模式-nav`)" id="定义模式-nav">
+									定义模式
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%a8%a1%e5%bc%8f%e5%af%b9%e9%bd%90" onclick="onNavClick(`#模式对齐-nav`)" id="模式对齐-nav">
+									模式对齐
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e7%89%b9%e6%ae%8a%e5%80%bc" onclick="onNavClick(`#特殊值-nav`)" id="特殊值-nav">
+									特殊值
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#initialfirefox" onclick="onNavClick(`#initialfirefox-nav`)" id="initialfirefox-nav">
+									initial（firefox）
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#inherit" onclick="onNavClick(`#inherit-nav`)" id="inherit-nav">
+									inherit
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#unset" onclick="onNavClick(`#unset-nav`)" id="unset-nav">
+									unset
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#allie%e4%b8%8d%e6%94%af%e6%8c%81" onclick="onNavClick(`#allie不支持-nav`)" id="allie不支持-nav">
+									all（IE不支持）
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#transparent" onclick="onNavClick(`#transparent-nav`)" id="transparent-nav">
+									transparent
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#currentcolor" onclick="onNavClick(`#currentcolor-nav`)" id="currentcolor-nav">
+									currentColor
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e6%96%87%e6%9c%ac%e9%98%b4%e5%bd%b1" onclick="onNavClick(`#文本阴影-nav`)" id="文本阴影-nav">
+									文本阴影
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%ae%9a%e4%b9%89%e9%98%b4%e5%bd%b1" onclick="onNavClick(`#定义阴影-nav`)" id="定义阴影-nav">
+									定义阴影
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%89%b9%e6%95%88%e6%96%87%e5%ad%97" onclick="onNavClick(`#特效文字-nav`)" id="特效文字-nav">
+									特效文字
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e5%8a%a8%e6%80%81%e5%86%85%e5%ae%b9" onclick="onNavClick(`#动态内容-nav`)" id="动态内容-nav">
+									动态内容
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%ae%9a%e4%b9%89%e5%8a%a8%e6%80%81%e5%86%85%e5%ae%b9" onclick="onNavClick(`#定义动态内容-nav`)" id="定义动态内容-nav">
+									定义动态内容
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%ae%be%e8%ae%a1%e7%9b%ae%e5%bd%95%e7%b4%a2%e5%bc%95" onclick="onNavClick(`#设计目录索引-nav`)" id="设计目录索引-nav">
+									设计目录索引
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%ae%be%e8%ae%a1%e5%bc%95%e5%8f%b7" onclick="onNavClick(`#设计引号-nav`)" id="设计引号-nav">
+									设计引号
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#css%e5%9b%be%e5%83%8f%e5%92%8c%e8%83%8c%e6%99%af" onclick="onNavClick(`#css图像和背景-nav`)" id="css图像和背景-nav">
+									CSS图像和背景
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e7%bd%91%e9%a1%b5%e5%9b%be%e5%83%8f" onclick="onNavClick(`#网页图像-nav`)" id="网页图像-nav">
+									网页图像
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%9b%be%e5%83%8f%e5%a4%a7%e5%b0%8f" onclick="onNavClick(`#图像大小-nav`)" id="图像大小-nav">
+									图像大小
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%9b%be%e5%83%8f%e8%be%b9%e6%a1%86" onclick="onNavClick(`#图像边框-nav`)" id="图像边框-nav">
+									图像边框
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%8d%8a%e9%80%8f%e6%98%8e%e6%98%be%e7%a4%ba" onclick="onNavClick(`#半透明显示-nav`)" id="半透明显示-nav">
+									半透明显示
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%9c%86%e5%bd%a2%e5%9b%be%e5%83%8f" onclick="onNavClick(`#圆形图像-nav`)" id="圆形图像-nav">
+									圆形图像
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%98%b4%e5%bd%b1%e5%9b%be%e5%83%8f" onclick="onNavClick(`#阴影图像-nav`)" id="阴影图像-nav">
+									阴影图像
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e5%9b%be%e5%83%8f%e8%83%8c%e6%99%af" onclick="onNavClick(`#图像背景-nav`)" id="图像背景-nav">
+									图像背景
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%ae%9a%e4%b9%89%e8%83%8c%e6%99%af%e5%9b%be%e5%83%8f" onclick="onNavClick(`#定义背景图像-nav`)" id="定义背景图像-nav">
+									定义背景图像
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%83%8c%e6%99%af%e5%8e%9f%e7%82%b9%e4%bd%8d%e7%bd%ae%e5%92%8c%e8%a3%81%e5%89%aa" onclick="onNavClick(`#背景原点位置和裁剪-nav`)" id="背景原点位置和裁剪-nav">
+									背景原点、位置和裁剪
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%8e%a7%e5%88%b6%e5%a4%a7%e5%b0%8f" onclick="onNavClick(`#控制大小-nav`)" id="控制大小-nav">
+									控制大小
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%9b%ba%e5%ae%9a%e6%98%be%e7%a4%ba" onclick="onNavClick(`#固定显示-nav`)" id="固定显示-nav">
+									固定显示
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e6%b8%90%e5%8f%98%e8%83%8c%e6%99%af" onclick="onNavClick(`#渐变背景-nav`)" id="渐变背景-nav">
+									渐变背景
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e7%ba%bf%e6%80%a7%e6%b8%90%e5%8f%98" onclick="onNavClick(`#线性渐变-nav`)" id="线性渐变-nav">
+									线性渐变
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%87%8d%e5%a4%8d%e7%ba%bf%e6%80%a7%e6%b8%90%e5%8f%98" onclick="onNavClick(`#重复线性渐变-nav`)" id="重复线性渐变-nav">
+									重复线性渐变
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%be%84%e5%90%91%e6%b8%90%e5%8f%98" onclick="onNavClick(`#径向渐变-nav`)" id="径向渐变-nav">
+									径向渐变
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%87%8d%e5%a4%8d%e5%be%84%e5%90%91%e6%b8%90%e5%8f%98" onclick="onNavClick(`#重复径向渐变-nav`)" id="重复径向渐变-nav">
+									重复径向渐变
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#css%e8%b6%85%e9%93%be%e6%8e%a5%e5%92%8c%e5%88%97%e8%a1%a8" onclick="onNavClick(`#css超链接和列表-nav`)" id="css超链接和列表-nav">
+									CSS超链接和列表
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e8%b6%85%e9%93%be%e6%8e%a5" onclick="onNavClick(`#超链接-nav`)" id="超链接-nav">
+									超链接
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e7%b1%bb%e5%9e%8b%e6%a0%87%e8%af%86" onclick="onNavClick(`#类型标识-nav`)" id="类型标识-nav">
+									类型标识
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%b7%a5%e5%85%b7%e6%8f%90%e7%a4%ba" onclick="onNavClick(`#工具提示-nav`)" id="工具提示-nav">
+									工具提示
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%9b%be%e5%bd%a2%e5%8c%96%e6%8c%89%e9%92%ae" onclick="onNavClick(`#图形化按钮-nav`)" id="图形化按钮-nav">
+									图形化按钮
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e5%af%bc%e8%88%aa%e8%8f%9c%e5%8d%95" onclick="onNavClick(`#导航菜单-nav`)" id="导航菜单-nav">
+									导航菜单
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%a0%86%e5%8f%a0%e5%af%bc%e8%88%aa%e6%9d%a1" onclick="onNavClick(`#堆叠导航条-nav`)" id="堆叠导航条-nav">
+									堆叠导航条
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%b0%b4%e5%b9%b3%e5%af%bc%e8%88%aa%e6%9d%a1" onclick="onNavClick(`#水平导航条-nav`)" id="水平导航条-nav">
+									水平导航条
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%b0%b4%e5%b9%b3%e8%87%aa%e9%80%82%e5%ba%94" onclick="onNavClick(`#水平自适应-nav`)" id="水平自适应-nav">
+									水平自适应
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%9e%82%e7%9b%b4%e8%87%aa%e9%80%82%e5%ba%94" onclick="onNavClick(`#垂直自适应-nav`)" id="垂直自适应-nav">
+									垂直自适应
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e5%88%97%e8%a1%a8%e6%a0%8f%e7%9b%ae" onclick="onNavClick(`#列表栏目-nav`)" id="列表栏目-nav">
+									列表栏目
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#tab%e9%80%89%e9%a1%b9%e9%9d%a2%e6%9d%bf" onclick="onNavClick(`#tab选项面板-nav`)" id="tab选项面板-nav">
+									Tab选项面板
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%9b%be%e7%89%87%e9%a2%84%e8%a7%88" onclick="onNavClick(`#图片预览-nav`)" id="图片预览-nav">
+									图片预览
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#css%e5%8a%a8%e7%94%bb" onclick="onNavClick(`#css动画-nav`)" id="css动画-nav">
+									CSS动画
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%8f%98%e5%bd%a2" onclick="onNavClick(`#变形-nav`)" id="变形-nav">
+									变形
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%ae%9a%e4%b9%892d%e5%8f%98%e5%bd%a2" onclick="onNavClick(`#定义2d变形-nav`)" id="定义2d变形-nav">
+									定义2D变形
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%ae%9a%e4%b9%893d%e5%8f%98%e5%bd%a2" onclick="onNavClick(`#定义3d变形-nav`)" id="定义3d变形-nav">
+									定义3D变形
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e8%bf%87%e6%b8%a1%e5%8a%a8%e7%94%bb" onclick="onNavClick(`#过渡动画-nav`)" id="过渡动画-nav">
+									过渡动画
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%85%89%e6%a0%87%e7%a7%bb%e8%bf%87%e5%8a%a8%e7%94%bb" onclick="onNavClick(`#光标移过动画-nav`)" id="光标移过动画-nav">
+									光标移过动画
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%bf%80%e6%b4%bb%e5%8a%a8%e7%94%bb" onclick="onNavClick(`#激活动画-nav`)" id="激活动画-nav">
+									激活动画
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%84%a6%e7%82%b9%e5%8a%a8%e7%94%bb" onclick="onNavClick(`#焦点动画-nav`)" id="焦点动画-nav">
+									焦点动画
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%80%89%e6%8b%a9%e5%8a%a8%e7%94%bb" onclick="onNavClick(`#选择动画-nav`)" id="选择动画-nav">
+									选择动画
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%9b%ae%e6%a0%87%e5%8a%a8%e7%94%bb" onclick="onNavClick(`#目标动画-nav`)" id="目标动画-nav">
+									目标动画
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%93%8d%e5%ba%94%e5%bc%8f%e5%8a%a8%e7%94%bb" onclick="onNavClick(`#响应式动画-nav`)" id="响应式动画-nav">
+									响应式动画
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e4%ba%8b%e4%bb%b6%e5%8a%a8%e7%94%bb" onclick="onNavClick(`#事件动画-nav`)" id="事件动画-nav">
+									事件动画
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%b8%a7%e5%8a%a8%e7%94%bb" onclick="onNavClick(`#帧动画-nav`)" id="帧动画-nav">
+									帧动画
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%ae%9a%e4%b9%89%e5%85%b3%e9%94%ae%e5%b8%a7" onclick="onNavClick(`#定义关键帧-nav`)" id="定义关键帧-nav">
+									定义关键帧
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%ae%9a%e4%b9%89%e5%b8%a7%e5%8a%a8%e7%94%bb" onclick="onNavClick(`#定义帧动画-nav`)" id="定义帧动画-nav">
+									定义帧动画
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#12javascript%e5%9f%ba%e7%a1%80" onclick="onNavClick(`#12javascript基础-nav`)" id="12javascript基础-nav">
+									12.Javascript基础
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#121-%e7%ae%80%e5%8d%95%e4%bb%8b%e7%bb%8d" onclick="onNavClick(`#121-简单介绍-nav`)" id="121-简单介绍-nav">
+									12.1 简单介绍
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#122-%e5%8f%98%e9%87%8f" onclick="onNavClick(`#122-变量-nav`)" id="122-变量-nav">
+									12.2 变量
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%a3%b0%e6%98%8e%e5%8f%98%e9%87%8f" onclick="onNavClick(`#声明变量-nav`)" id="声明变量-nav">
+									声明变量
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%8f%98%e9%87%8f%e8%b5%8b%e5%80%bc" onclick="onNavClick(`#变量赋值-nav`)" id="变量赋值-nav">
+									变量赋值
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%8f%98%e9%87%8f%e4%bd%9c%e7%94%a8%e5%9f%9f" onclick="onNavClick(`#变量作用域-nav`)" id="变量作用域-nav">
+									变量作用域
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%85%a8%e5%b1%80%e5%8f%98%e9%87%8f" onclick="onNavClick(`#全局变量-nav`)" id="全局变量-nav">
+									全局变量
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#123-%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b" onclick="onNavClick(`#123-数据类型-nav`)" id="123-数据类型-nav">
+									12.3 数据类型
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#124-%e7%b1%bb%e5%9e%8b%e8%bd%ac%e6%8d%a2" onclick="onNavClick(`#124-类型转换-nav`)" id="124-类型转换-nav">
+									12.4 类型转换
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#125-%e5%9f%ba%e6%9c%ac%e8%bf%90%e7%ae%97" onclick="onNavClick(`#125-基本运算-nav`)" id="125-基本运算-nav">
+									12.5 基本运算
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e7%ae%97%e6%9c%af%e8%bf%90%e7%ae%97" onclick="onNavClick(`#算术运算-nav`)" id="算术运算-nav">
+									算术运算
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%80%bb%e8%be%91%e8%bf%90%e7%ae%97" onclick="onNavClick(`#逻辑运算-nav`)" id="逻辑运算-nav">
+									逻辑运算
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%85%b3%e7%b3%bb%e8%bf%90%e7%ae%97" onclick="onNavClick(`#关系运算-nav`)" id="关系运算-nav">
+									关系运算
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%b5%8b%e5%80%bc%e8%bf%90%e7%ae%97" onclick="onNavClick(`#赋值运算-nav`)" id="赋值运算-nav">
+									赋值运算
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#126-%e7%a8%8b%e5%ba%8f%e7%bb%93%e6%9e%84" onclick="onNavClick(`#126-程序结构-nav`)" id="126-程序结构-nav">
+									12.6 程序结构
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#if" onclick="onNavClick(`#if-nav`)" id="if-nav">
+									if
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#else" onclick="onNavClick(`#else-nav`)" id="else-nav">
+									else
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#switch" onclick="onNavClick(`#switch-nav`)" id="switch-nav">
+									switch
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#default" onclick="onNavClick(`#default-nav`)" id="default-nav">
+									default
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#while" onclick="onNavClick(`#while-nav`)" id="while-nav">
+									while
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#dowhile" onclick="onNavClick(`#dowhile-nav`)" id="dowhile-nav">
+									do/while
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#for" onclick="onNavClick(`#for-nav`)" id="for-nav">
+									for
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#forin" onclick="onNavClick(`#forin-nav`)" id="forin-nav">
+									for/in
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#label-break" onclick="onNavClick(`#label-break-nav`)" id="label-break-nav">
+									label break
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#continue" onclick="onNavClick(`#continue-nav`)" id="continue-nav">
+									continue
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#trycatchfinally" onclick="onNavClick(`#trycatchfinally-nav`)" id="trycatchfinally-nav">
+									try/catch/finally
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#throw" onclick="onNavClick(`#throw-nav`)" id="throw-nav">
+									throw
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#127-%e6%95%b0%e7%bb%84" onclick="onNavClick(`#127-数组-nav`)" id="127-数组-nav">
+									12.7 数组
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#for-1" onclick="onNavClick(`#for-1-nav`)" id="for-1-nav">
+									for
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#foreach" onclick="onNavClick(`#foreach-nav`)" id="foreach-nav">
+									forEach
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#keys" onclick="onNavClick(`#keys-nav`)" id="keys-nav">
+									keys
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%a0%88%e6%93%8d%e4%bd%9c" onclick="onNavClick(`#栈操作-nav`)" id="栈操作-nav">
+									栈操作
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%98%9f%e5%88%97%e7%82%92%e4%bd%9c" onclick="onNavClick(`#队列炒作-nav`)" id="队列炒作-nav">
+									队列炒作
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%88%a0%e9%99%a4%e5%85%83%e7%b4%a0" onclick="onNavClick(`#删除元素-nav`)" id="删除元素-nav">
+									删除元素
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%b7%bb%e5%8a%a0%e5%85%83%e7%b4%a0" onclick="onNavClick(`#添加元素-nav`)" id="添加元素-nav">
+									添加元素
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%88%aa%e5%8f%96%e6%95%b0%e7%bb%84" onclick="onNavClick(`#截取数组-nav`)" id="截取数组-nav">
+									截取数组
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%95%b0%e7%bb%84%e6%8e%92%e5%ba%8f" onclick="onNavClick(`#数组排序-nav`)" id="数组排序-nav">
+									数组排序
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%95%b0%e7%bb%84%e8%bd%ac%e6%8d%a2" onclick="onNavClick(`#数组转换-nav`)" id="数组转换-nav">
+									数组转换
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%85%83%e7%b4%a0%e5%ae%9a%e4%bd%8d" onclick="onNavClick(`#元素定位-nav`)" id="元素定位-nav">
+									元素定位
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%a3%80%e6%b5%8b%e6%95%b0%e7%bb%84" onclick="onNavClick(`#检测数组-nav`)" id="检测数组-nav">
+									检测数组
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%81%8d%e5%8e%86%e6%95%b0%e7%bb%84" onclick="onNavClick(`#遍历数组-nav`)" id="遍历数组-nav">
+									遍历数组
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#13bom-dom%e6%93%8d%e4%bd%9c" onclick="onNavClick(`#13bom-dom操作-nav`)" id="13bom-dom操作-nav">
+									13.BOM 、DOM操作
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#131-%e5%85%83%e7%b4%a0" onclick="onNavClick(`#131-元素-nav`)" id="131-元素-nav">
+									13.1 元素
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#14%e4%ba%8b%e4%bb%b6%e5%a4%84%e7%90%86" onclick="onNavClick(`#14事件处理-nav`)" id="14事件处理-nav">
+									14.事件处理
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#15jquery" onclick="onNavClick(`#15jquery-nav`)" id="15jquery-nav">
+									15.jQuery
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div>
+<div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#css%e5%9f%ba%e7%a1%80" onclick="onNavClick(`#css基础-nav`)" id="css基础-nav">
+									CSS基础
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%9f%ba%e6%9c%ac%e7%94%a8%e6%b3%95" onclick="onNavClick(`#基本用法-nav`)" id="基本用法-nav">
+									基本用法
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e6%a0%b7%e5%bc%8f" onclick="onNavClick(`#样式-nav`)" id="样式-nav">
+									样式
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%a0%b7%e5%bc%8f%e8%a1%a8" onclick="onNavClick(`#样式表-nav`)" id="样式表-nav">
+									样式表
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e4%bb%a3%e7%a0%81%e6%b3%a8%e9%87%8a%e5%92%8c%e6%a0%bc%e5%bc%8f%e5%8c%96" onclick="onNavClick(`#代码注释和格式化-nav`)" id="代码注释和格式化-nav">
+									代码注释和格式化
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%bb%a7%e6%89%bf%e6%80%a7" onclick="onNavClick(`#继承性-nav`)" id="继承性-nav">
+									继承性
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%b1%82%e5%8f%a0%e6%80%a7" onclick="onNavClick(`#层叠性-nav`)" id="层叠性-nav">
+									层叠性
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e9%80%89%e6%8b%a9%e5%99%a8" onclick="onNavClick(`#选择器-nav`)" id="选择器-nav">
+									选择器
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e6%a0%87%e7%ad%be%e9%80%89%e6%8b%a9%e5%99%a8" onclick="onNavClick(`#标签选择器-nav`)" id="标签选择器-nav">
+									标签选择器
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%b1%bb%e9%80%89%e6%8b%a9%e5%99%a8" onclick="onNavClick(`#类选择器-nav`)" id="类选择器-nav">
+									类选择器
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#id%e9%80%89%e6%8b%a9%e5%99%a8" onclick="onNavClick(`#id选择器-nav`)" id="id选择器-nav">
+									ID选择器
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%8c%85%e5%90%ab%e9%80%89%e6%8b%a9%e5%99%a8" onclick="onNavClick(`#包含选择器-nav`)" id="包含选择器-nav">
+									包含选择器
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%ad%90%e9%80%89%e6%8b%a9%e5%99%a8" onclick="onNavClick(`#子选择器-nav`)" id="子选择器-nav">
+									子选择器
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%9b%b8%e9%82%bb%e9%80%89%e6%8b%a9%e5%99%a8" onclick="onNavClick(`#相邻选择器-nav`)" id="相邻选择器-nav">
+									相邻选择器
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%85%84%e5%bc%9f%e9%80%89%e6%8b%a9%e5%99%a8" onclick="onNavClick(`#兄弟选择器-nav`)" id="兄弟选择器-nav">
+									兄弟选择器
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%b1%9e%e6%80%a7%e9%80%89%e6%8b%a9%e5%99%a8" onclick="onNavClick(`#属性选择器-nav`)" id="属性选择器-nav">
+									属性选择器
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%bb%93%e6%9e%84%e4%bc%aa%e7%b1%bb%e9%80%89%e6%8b%a9%e5%99%a8" onclick="onNavClick(`#结构伪类选择器-nav`)" id="结构伪类选择器-nav">
+									结构伪类选择器
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%90%a6%e5%ae%9a%e4%bc%aa%e7%b1%bb%e9%80%89%e6%8b%a9%e5%99%a8" onclick="onNavClick(`#否定伪类选择器-nav`)" id="否定伪类选择器-nav">
+									否定伪类选择器
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%8a%b6%e6%80%81%e4%bc%aa%e7%b1%bb%e9%80%89%e6%8b%a9%e5%99%a8" onclick="onNavClick(`#状态伪类选择器-nav`)" id="状态伪类选择器-nav">
+									状态伪类选择器
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%9b%ae%e6%a0%87%e4%bc%aa%e7%b1%bb%e9%80%89%e6%8b%a9%e5%99%a8" onclick="onNavClick(`#目标伪类选择器-nav`)" id="目标伪类选择器-nav">
+									目标伪类选择器
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%8a%a8%e6%80%81%e4%bc%aa%e7%b1%bb%e9%80%89%e6%8b%a9%e5%99%a8" onclick="onNavClick(`#动态伪类选择器-nav`)" id="动态伪类选择器-nav">
+									动态伪类选择器
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e4%bc%aa%e5%af%b9%e8%b1%a1%e9%80%89%e6%8b%a9%e5%99%a8" onclick="onNavClick(`#伪对象选择器-nav`)" id="伪对象选择器-nav">
+									伪对象选择器
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#css%e6%96%87%e6%9c%ac" onclick="onNavClick(`#css文本-nav`)" id="css文本-nav">
+									CSS文本
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%ad%97%e4%bd%93%e6%a0%b7%e5%bc%8f" onclick="onNavClick(`#字体样式-nav`)" id="字体样式-nav">
+									字体样式
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%ad%97%e4%bd%93%e7%b1%bb%e5%9e%8b%e5%a4%a7%e5%b0%8f%e5%92%8c%e9%a2%9c%e8%89%b2" onclick="onNavClick(`#字体类型大小和颜色-nav`)" id="字体类型大小和颜色-nav">
+									字体类型、大小和颜色
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%b2%97%e4%bd%93%e6%96%9c%e4%bd%93%e5%92%8c%e4%b8%8b%e5%88%92%e7%ba%bf" onclick="onNavClick(`#粗体斜体和下划线-nav`)" id="粗体斜体和下划线-nav">
+									粗体、斜体和下划线
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%8f%98%e4%bd%93%e5%92%8c%e5%a4%a7%e5%b0%8f%e5%86%99" onclick="onNavClick(`#变体和大小写-nav`)" id="变体和大小写-nav">
+									变体和大小写
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e6%96%87%e6%9c%ac%e6%a0%bc%e5%bc%8f" onclick="onNavClick(`#文本格式-nav`)" id="文本格式-nav">
+									文本格式
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e6%96%87%e6%9c%ac%e5%af%b9%e9%bd%90" onclick="onNavClick(`#文本对齐-nav`)" id="文本对齐-nav">
+									文本对齐
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%96%87%e6%9c%ac%e9%97%b4%e8%b7%9d" onclick="onNavClick(`#文本间距-nav`)" id="文本间距-nav">
+									文本间距
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%a1%8c%e9%ab%98" onclick="onNavClick(`#行高-nav`)" id="行高-nav">
+									行高
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%bc%a9%e8%bf%9b" onclick="onNavClick(`#缩进-nav`)" id="缩进-nav">
+									缩进
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%8d%a2%e8%a1%8c" onclick="onNavClick(`#换行-nav`)" id="换行-nav">
+									换行
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e4%b9%a6%e5%86%99%e6%a8%a1%e5%bc%8f" onclick="onNavClick(`#书写模式-nav`)" id="书写模式-nav">
+									书写模式
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%ae%9a%e4%b9%89%e6%a8%a1%e5%bc%8f" onclick="onNavClick(`#定义模式-nav`)" id="定义模式-nav">
+									定义模式
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%a8%a1%e5%bc%8f%e5%af%b9%e9%bd%90" onclick="onNavClick(`#模式对齐-nav`)" id="模式对齐-nav">
+									模式对齐
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e7%89%b9%e6%ae%8a%e5%80%bc" onclick="onNavClick(`#特殊值-nav`)" id="特殊值-nav">
+									特殊值
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#initialfirefox" onclick="onNavClick(`#initialfirefox-nav`)" id="initialfirefox-nav">
+									initial（firefox）
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#inherit" onclick="onNavClick(`#inherit-nav`)" id="inherit-nav">
+									inherit
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#unset" onclick="onNavClick(`#unset-nav`)" id="unset-nav">
+									unset
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#allie%e4%b8%8d%e6%94%af%e6%8c%81" onclick="onNavClick(`#allie不支持-nav`)" id="allie不支持-nav">
+									all（IE不支持）
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#transparent" onclick="onNavClick(`#transparent-nav`)" id="transparent-nav">
+									transparent
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#currentcolor" onclick="onNavClick(`#currentcolor-nav`)" id="currentcolor-nav">
+									currentColor
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e6%96%87%e6%9c%ac%e9%98%b4%e5%bd%b1" onclick="onNavClick(`#文本阴影-nav`)" id="文本阴影-nav">
+									文本阴影
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%ae%9a%e4%b9%89%e9%98%b4%e5%bd%b1" onclick="onNavClick(`#定义阴影-nav`)" id="定义阴影-nav">
+									定义阴影
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%89%b9%e6%95%88%e6%96%87%e5%ad%97" onclick="onNavClick(`#特效文字-nav`)" id="特效文字-nav">
+									特效文字
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e5%8a%a8%e6%80%81%e5%86%85%e5%ae%b9" onclick="onNavClick(`#动态内容-nav`)" id="动态内容-nav">
+									动态内容
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%ae%9a%e4%b9%89%e5%8a%a8%e6%80%81%e5%86%85%e5%ae%b9" onclick="onNavClick(`#定义动态内容-nav`)" id="定义动态内容-nav">
+									定义动态内容
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%ae%be%e8%ae%a1%e7%9b%ae%e5%bd%95%e7%b4%a2%e5%bc%95" onclick="onNavClick(`#设计目录索引-nav`)" id="设计目录索引-nav">
+									设计目录索引
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%ae%be%e8%ae%a1%e5%bc%95%e5%8f%b7" onclick="onNavClick(`#设计引号-nav`)" id="设计引号-nav">
+									设计引号
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#css%e5%9b%be%e5%83%8f%e5%92%8c%e8%83%8c%e6%99%af" onclick="onNavClick(`#css图像和背景-nav`)" id="css图像和背景-nav">
+									CSS图像和背景
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e7%bd%91%e9%a1%b5%e5%9b%be%e5%83%8f" onclick="onNavClick(`#网页图像-nav`)" id="网页图像-nav">
+									网页图像
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%9b%be%e5%83%8f%e5%a4%a7%e5%b0%8f" onclick="onNavClick(`#图像大小-nav`)" id="图像大小-nav">
+									图像大小
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%9b%be%e5%83%8f%e8%be%b9%e6%a1%86" onclick="onNavClick(`#图像边框-nav`)" id="图像边框-nav">
+									图像边框
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%8d%8a%e9%80%8f%e6%98%8e%e6%98%be%e7%a4%ba" onclick="onNavClick(`#半透明显示-nav`)" id="半透明显示-nav">
+									半透明显示
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%9c%86%e5%bd%a2%e5%9b%be%e5%83%8f" onclick="onNavClick(`#圆形图像-nav`)" id="圆形图像-nav">
+									圆形图像
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%98%b4%e5%bd%b1%e5%9b%be%e5%83%8f" onclick="onNavClick(`#阴影图像-nav`)" id="阴影图像-nav">
+									阴影图像
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e5%9b%be%e5%83%8f%e8%83%8c%e6%99%af" onclick="onNavClick(`#图像背景-nav`)" id="图像背景-nav">
+									图像背景
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%ae%9a%e4%b9%89%e8%83%8c%e6%99%af%e5%9b%be%e5%83%8f" onclick="onNavClick(`#定义背景图像-nav`)" id="定义背景图像-nav">
+									定义背景图像
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%83%8c%e6%99%af%e5%8e%9f%e7%82%b9%e4%bd%8d%e7%bd%ae%e5%92%8c%e8%a3%81%e5%89%aa" onclick="onNavClick(`#背景原点位置和裁剪-nav`)" id="背景原点位置和裁剪-nav">
+									背景原点、位置和裁剪
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%8e%a7%e5%88%b6%e5%a4%a7%e5%b0%8f" onclick="onNavClick(`#控制大小-nav`)" id="控制大小-nav">
+									控制大小
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%9b%ba%e5%ae%9a%e6%98%be%e7%a4%ba" onclick="onNavClick(`#固定显示-nav`)" id="固定显示-nav">
+									固定显示
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e6%b8%90%e5%8f%98%e8%83%8c%e6%99%af" onclick="onNavClick(`#渐变背景-nav`)" id="渐变背景-nav">
+									渐变背景
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e7%ba%bf%e6%80%a7%e6%b8%90%e5%8f%98" onclick="onNavClick(`#线性渐变-nav`)" id="线性渐变-nav">
+									线性渐变
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%87%8d%e5%a4%8d%e7%ba%bf%e6%80%a7%e6%b8%90%e5%8f%98" onclick="onNavClick(`#重复线性渐变-nav`)" id="重复线性渐变-nav">
+									重复线性渐变
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%be%84%e5%90%91%e6%b8%90%e5%8f%98" onclick="onNavClick(`#径向渐变-nav`)" id="径向渐变-nav">
+									径向渐变
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%87%8d%e5%a4%8d%e5%be%84%e5%90%91%e6%b8%90%e5%8f%98" onclick="onNavClick(`#重复径向渐变-nav`)" id="重复径向渐变-nav">
+									重复径向渐变
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#css%e8%b6%85%e9%93%be%e6%8e%a5%e5%92%8c%e5%88%97%e8%a1%a8" onclick="onNavClick(`#css超链接和列表-nav`)" id="css超链接和列表-nav">
+									CSS超链接和列表
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e8%b6%85%e9%93%be%e6%8e%a5" onclick="onNavClick(`#超链接-nav`)" id="超链接-nav">
+									超链接
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e7%b1%bb%e5%9e%8b%e6%a0%87%e8%af%86" onclick="onNavClick(`#类型标识-nav`)" id="类型标识-nav">
+									类型标识
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%b7%a5%e5%85%b7%e6%8f%90%e7%a4%ba" onclick="onNavClick(`#工具提示-nav`)" id="工具提示-nav">
+									工具提示
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%9b%be%e5%bd%a2%e5%8c%96%e6%8c%89%e9%92%ae" onclick="onNavClick(`#图形化按钮-nav`)" id="图形化按钮-nav">
+									图形化按钮
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e5%af%bc%e8%88%aa%e8%8f%9c%e5%8d%95" onclick="onNavClick(`#导航菜单-nav`)" id="导航菜单-nav">
+									导航菜单
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%a0%86%e5%8f%a0%e5%af%bc%e8%88%aa%e6%9d%a1" onclick="onNavClick(`#堆叠导航条-nav`)" id="堆叠导航条-nav">
+									堆叠导航条
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%b0%b4%e5%b9%b3%e5%af%bc%e8%88%aa%e6%9d%a1" onclick="onNavClick(`#水平导航条-nav`)" id="水平导航条-nav">
+									水平导航条
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%b0%b4%e5%b9%b3%e8%87%aa%e9%80%82%e5%ba%94" onclick="onNavClick(`#水平自适应-nav`)" id="水平自适应-nav">
+									水平自适应
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%9e%82%e7%9b%b4%e8%87%aa%e9%80%82%e5%ba%94" onclick="onNavClick(`#垂直自适应-nav`)" id="垂直自适应-nav">
+									垂直自适应
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e5%88%97%e8%a1%a8%e6%a0%8f%e7%9b%ae" onclick="onNavClick(`#列表栏目-nav`)" id="列表栏目-nav">
+									列表栏目
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#tab%e9%80%89%e9%a1%b9%e9%9d%a2%e6%9d%bf" onclick="onNavClick(`#tab选项面板-nav`)" id="tab选项面板-nav">
+									Tab选项面板
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%9b%be%e7%89%87%e9%a2%84%e8%a7%88" onclick="onNavClick(`#图片预览-nav`)" id="图片预览-nav">
+									图片预览
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#css%e5%8a%a8%e7%94%bb" onclick="onNavClick(`#css动画-nav`)" id="css动画-nav">
+									CSS动画
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%8f%98%e5%bd%a2" onclick="onNavClick(`#变形-nav`)" id="变形-nav">
+									变形
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%ae%9a%e4%b9%892d%e5%8f%98%e5%bd%a2" onclick="onNavClick(`#定义2d变形-nav`)" id="定义2d变形-nav">
+									定义2D变形
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%ae%9a%e4%b9%893d%e5%8f%98%e5%bd%a2" onclick="onNavClick(`#定义3d变形-nav`)" id="定义3d变形-nav">
+									定义3D变形
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e8%bf%87%e6%b8%a1%e5%8a%a8%e7%94%bb" onclick="onNavClick(`#过渡动画-nav`)" id="过渡动画-nav">
+									过渡动画
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%85%89%e6%a0%87%e7%a7%bb%e8%bf%87%e5%8a%a8%e7%94%bb" onclick="onNavClick(`#光标移过动画-nav`)" id="光标移过动画-nav">
+									光标移过动画
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%bf%80%e6%b4%bb%e5%8a%a8%e7%94%bb" onclick="onNavClick(`#激活动画-nav`)" id="激活动画-nav">
+									激活动画
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%84%a6%e7%82%b9%e5%8a%a8%e7%94%bb" onclick="onNavClick(`#焦点动画-nav`)" id="焦点动画-nav">
+									焦点动画
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%80%89%e6%8b%a9%e5%8a%a8%e7%94%bb" onclick="onNavClick(`#选择动画-nav`)" id="选择动画-nav">
+									选择动画
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%9b%ae%e6%a0%87%e5%8a%a8%e7%94%bb" onclick="onNavClick(`#目标动画-nav`)" id="目标动画-nav">
+									目标动画
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%93%8d%e5%ba%94%e5%bc%8f%e5%8a%a8%e7%94%bb" onclick="onNavClick(`#响应式动画-nav`)" id="响应式动画-nav">
+									响应式动画
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e4%ba%8b%e4%bb%b6%e5%8a%a8%e7%94%bb" onclick="onNavClick(`#事件动画-nav`)" id="事件动画-nav">
+									事件动画
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%b8%a7%e5%8a%a8%e7%94%bb" onclick="onNavClick(`#帧动画-nav`)" id="帧动画-nav">
+									帧动画
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%ae%9a%e4%b9%89%e5%85%b3%e9%94%ae%e5%b8%a7" onclick="onNavClick(`#定义关键帧-nav`)" id="定义关键帧-nav">
+									定义关键帧
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%ae%9a%e4%b9%89%e5%b8%a7%e5%8a%a8%e7%94%bb" onclick="onNavClick(`#定义帧动画-nav`)" id="定义帧动画-nav">
+									定义帧动画
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#12javascript%e5%9f%ba%e7%a1%80" onclick="onNavClick(`#12javascript基础-nav`)" id="12javascript基础-nav">
+									12.Javascript基础
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#121-%e7%ae%80%e5%8d%95%e4%bb%8b%e7%bb%8d" onclick="onNavClick(`#121-简单介绍-nav`)" id="121-简单介绍-nav">
+									12.1 简单介绍
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#122-%e5%8f%98%e9%87%8f" onclick="onNavClick(`#122-变量-nav`)" id="122-变量-nav">
+									12.2 变量
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%a3%b0%e6%98%8e%e5%8f%98%e9%87%8f" onclick="onNavClick(`#声明变量-nav`)" id="声明变量-nav">
+									声明变量
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%8f%98%e9%87%8f%e8%b5%8b%e5%80%bc" onclick="onNavClick(`#变量赋值-nav`)" id="变量赋值-nav">
+									变量赋值
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%8f%98%e9%87%8f%e4%bd%9c%e7%94%a8%e5%9f%9f" onclick="onNavClick(`#变量作用域-nav`)" id="变量作用域-nav">
+									变量作用域
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%85%a8%e5%b1%80%e5%8f%98%e9%87%8f" onclick="onNavClick(`#全局变量-nav`)" id="全局变量-nav">
+									全局变量
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#123-%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b" onclick="onNavClick(`#123-数据类型-nav`)" id="123-数据类型-nav">
+									12.3 数据类型
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#124-%e7%b1%bb%e5%9e%8b%e8%bd%ac%e6%8d%a2" onclick="onNavClick(`#124-类型转换-nav`)" id="124-类型转换-nav">
+									12.4 类型转换
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#125-%e5%9f%ba%e6%9c%ac%e8%bf%90%e7%ae%97" onclick="onNavClick(`#125-基本运算-nav`)" id="125-基本运算-nav">
+									12.5 基本运算
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e7%ae%97%e6%9c%af%e8%bf%90%e7%ae%97" onclick="onNavClick(`#算术运算-nav`)" id="算术运算-nav">
+									算术运算
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%80%bb%e8%be%91%e8%bf%90%e7%ae%97" onclick="onNavClick(`#逻辑运算-nav`)" id="逻辑运算-nav">
+									逻辑运算
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%85%b3%e7%b3%bb%e8%bf%90%e7%ae%97" onclick="onNavClick(`#关系运算-nav`)" id="关系运算-nav">
+									关系运算
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%b5%8b%e5%80%bc%e8%bf%90%e7%ae%97" onclick="onNavClick(`#赋值运算-nav`)" id="赋值运算-nav">
+									赋值运算
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#126-%e7%a8%8b%e5%ba%8f%e7%bb%93%e6%9e%84" onclick="onNavClick(`#126-程序结构-nav`)" id="126-程序结构-nav">
+									12.6 程序结构
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#if" onclick="onNavClick(`#if-nav`)" id="if-nav">
+									if
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#else" onclick="onNavClick(`#else-nav`)" id="else-nav">
+									else
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#switch" onclick="onNavClick(`#switch-nav`)" id="switch-nav">
+									switch
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#default" onclick="onNavClick(`#default-nav`)" id="default-nav">
+									default
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#while" onclick="onNavClick(`#while-nav`)" id="while-nav">
+									while
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#dowhile" onclick="onNavClick(`#dowhile-nav`)" id="dowhile-nav">
+									do/while
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#for" onclick="onNavClick(`#for-nav`)" id="for-nav">
+									for
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#forin" onclick="onNavClick(`#forin-nav`)" id="forin-nav">
+									for/in
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#label-break" onclick="onNavClick(`#label-break-nav`)" id="label-break-nav">
+									label break
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#continue" onclick="onNavClick(`#continue-nav`)" id="continue-nav">
+									continue
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#trycatchfinally" onclick="onNavClick(`#trycatchfinally-nav`)" id="trycatchfinally-nav">
+									try/catch/finally
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#throw" onclick="onNavClick(`#throw-nav`)" id="throw-nav">
+									throw
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#127-%e6%95%b0%e7%bb%84" onclick="onNavClick(`#127-数组-nav`)" id="127-数组-nav">
+									12.7 数组
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#for-1" onclick="onNavClick(`#for-1-nav`)" id="for-1-nav">
+									for
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#foreach" onclick="onNavClick(`#foreach-nav`)" id="foreach-nav">
+									forEach
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#keys" onclick="onNavClick(`#keys-nav`)" id="keys-nav">
+									keys
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%a0%88%e6%93%8d%e4%bd%9c" onclick="onNavClick(`#栈操作-nav`)" id="栈操作-nav">
+									栈操作
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%98%9f%e5%88%97%e7%82%92%e4%bd%9c" onclick="onNavClick(`#队列炒作-nav`)" id="队列炒作-nav">
+									队列炒作
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%88%a0%e9%99%a4%e5%85%83%e7%b4%a0" onclick="onNavClick(`#删除元素-nav`)" id="删除元素-nav">
+									删除元素
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%b7%bb%e5%8a%a0%e5%85%83%e7%b4%a0" onclick="onNavClick(`#添加元素-nav`)" id="添加元素-nav">
+									添加元素
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%88%aa%e5%8f%96%e6%95%b0%e7%bb%84" onclick="onNavClick(`#截取数组-nav`)" id="截取数组-nav">
+									截取数组
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%95%b0%e7%bb%84%e6%8e%92%e5%ba%8f" onclick="onNavClick(`#数组排序-nav`)" id="数组排序-nav">
+									数组排序
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%95%b0%e7%bb%84%e8%bd%ac%e6%8d%a2" onclick="onNavClick(`#数组转换-nav`)" id="数组转换-nav">
+									数组转换
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%85%83%e7%b4%a0%e5%ae%9a%e4%bd%8d" onclick="onNavClick(`#元素定位-nav`)" id="元素定位-nav">
+									元素定位
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%a3%80%e6%b5%8b%e6%95%b0%e7%bb%84" onclick="onNavClick(`#检测数组-nav`)" id="检测数组-nav">
+									检测数组
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%81%8d%e5%8e%86%e6%95%b0%e7%bb%84" onclick="onNavClick(`#遍历数组-nav`)" id="遍历数组-nav">
+									遍历数组
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#13bom-dom%e6%93%8d%e4%bd%9c" onclick="onNavClick(`#13bom-dom操作-nav`)" id="13bom-dom操作-nav">
+									13.BOM 、DOM操作
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#131-%e5%85%83%e7%b4%a0" onclick="onNavClick(`#131-元素-nav`)" id="131-元素-nav">
+									13.1 元素
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#14%e4%ba%8b%e4%bb%b6%e5%a4%84%e7%90%86" onclick="onNavClick(`#14事件处理-nav`)" id="14事件处理-nav">
+									14.事件处理
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#15jquery" onclick="onNavClick(`#15jquery-nav`)" id="15jquery-nav">
+									15.jQuery
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="https://tiankong98.github.io/">
+            绚烂的星星@cilia
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://tiankong98.github.io/">
+        <div class="single-column-header-title">绚烂的星星@cilia</div>
+        
+        <div class="single-column-header-subtitle">日记一事.</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    CSS学习笔记
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2022-03-24 15:55
+                        </time>
+                        
+
+                        
+
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h1 id="css基础">CSS基础</h1>
+<h2 id="基本用法">基本用法</h2>
+<h4 id="样式">样式</h4>
+<p>基本结构：                  <img src="C:%5CUsers%5CAdministrator%5CDesktop%5Cweb%5Cimgforall%5C1.png" alt=""></p>
+<p>选择器：重点</p>
+<p>声明之间用封号隔开</p>
+<p>属性和属性值之间用冒号</p>
+<h4 id="样式表">样式表</h4>
+<p>内部、外部样式表</p>
+<h4 id="代码注释和格式化">代码注释和格式化</h4>
+<p>/**/</p>
+<h4 id="继承性">继承性</h4>
+<p>父元素定义的样式会被子元素继承 主要是字体、颜色和文本属性具有继承性。</p>
+<h4 id="层叠性">层叠性</h4>
+<p>不同样式作用同一个对象时 ，由于声明同一个属性，会发生优先级。</p>
+<p>样式表的优先级：</p>
+<p>标签选择器：优先级加权值为1；</p>
+<p>伪元素或伪对象选择器：优先级加权值为1；</p>
+<p>类选择器：优先值加权值为10；</p>
+<p>属性选择器：优先级加权值为10；</p>
+<p>ID选择器：优先级加权值为100。</p>
+<h2 id="选择器">选择器</h2>
+<h4 id="标签选择器">标签选择器</h4>
+<p>通过html标签名设置选择器。</p>
+<h4 id="类选择器">类选择器</h4>
+<p>个性化定制。</p>
+<p>点号+类名</p>
+<h4 id="id选择器">ID选择器</h4>
+<p>#ID</p>
+<p>标签#ID</p>
+<h4 id="包含选择器">包含选择器</h4>
+<p>通过空格 定义包含</p>
+<p>如 .class a{}</p>
+<h4 id="子选择器">子选择器</h4>
+<p>父选择器&gt;子选择器  包含选择器范围更大</p>
+<h4 id="相邻选择器">相邻选择器</h4>
+<p>与前一选择器相邻的选择器</p>
+<h4 id="兄弟选择器">兄弟选择器</h4>
+<p>匹配前一选择器后面的所有选择器</p>
+<h4 id="属性选择器">属性选择器</h4>
+<p>[属性]</p>
+<h4 id="结构伪类选择器">结构伪类选择器</h4>
+<p>文档结构中匹配特定元素</p>
+<h4 id="否定伪类选择器">否定伪类选择器</h4>
+<p>E:not(s)</p>
+<h4 id="状态伪类选择器">状态伪类选择器</h4>
+<h4 id="目标伪类选择器">目标伪类选择器</h4>
+<h4 id="动态伪类选择器">动态伪类选择器</h4>
+<h4 id="伪对象选择器">伪对象选择器</h4>
+<h2 id="css文本">CSS文本</h2>
+<h3 id="字体样式">字体样式</h3>
+<h4 id="字体类型大小和颜色">字体类型、大小和颜色</h4>
+<p>Font font-size(通用字体默认16px) color</p>
+<h4 id="粗体斜体和下划线">粗体、斜体和下划线</h4>
+<p>Font-weight</p>
+<p>Font-style</p>
+<p>text-decoration</p>
+<h4 id="变体和大小写">变体和大小写</h4>
+<p>Font-variant text-transform</p>
+<h3 id="文本格式">文本格式</h3>
+<h4 id="文本对齐">文本对齐</h4>
+<p>Text-align vertical-align</p>
+<h4 id="文本间距">文本间距</h4>
+<p>Letter-spacing  word-spacing</p>
+<h4 id="行高">行高</h4>
+<p>Line-height</p>
+<h4 id="缩进">缩进</h4>
+<p>Text-indent 首行缩进</p>
+<h4 id="换行">换行</h4>
+<p>Word-wrap/break</p>
+<h3 id="书写模式">书写模式</h3>
+<h4 id="定义模式">定义模式</h4>
+<p>Writing-mode</p>
+<h4 id="模式对齐">模式对齐</h4>
+<h3 id="特殊值">特殊值</h3>
+<h4 id="initialfirefox">initial（firefox）</h4>
+<p>初始值</p>
+<h4 id="inherit">inherit</h4>
+<p>属性继承祖先设置</p>
+<h4 id="unset">unset</h4>
+<p>恢复默认值</p>
+<h4 id="allie不支持">all（IE不支持）</h4>
+<p>All:unset</p>
+<h4 id="transparent">transparent</h4>
+<p>透明度</p>
+<h4 id="currentcolor">currentColor</h4>
+<h3 id="文本阴影">文本阴影</h3>
+<h4 id="定义阴影">定义阴影</h4>
+<p>Text-shadow</p>
+<h4 id="特效文字">特效文字</h4>
+<h3 id="动态内容">动态内容</h3>
+<h4 id="定义动态内容">定义动态内容</h4>
+<p>Content</p>
+<p>Normal:默认值</p>
+<p>String:插入文本内容</p>
+<p>Attr():插入元素的属性值</p>
+<p>url():插入一个外部资源，如图像，音视频等</p>
+<p>counter():计数器，用于插入排序标识</p>
+<p>none:无任何内容</p>
+<h4 id="设计目录索引">设计目录索引</h4>
+<h4 id="设计引号">设计引号</h4>
+<p>Quotes</p>
+<h2 id="css图像和背景">CSS图像和背景</h2>
+<h3 id="网页图像">网页图像</h3>
+<h4 id="图像大小">图像大小</h4>
+<p>Img标签： width,height</p>
+<p>Css: width,height</p>
+<h4 id="图像边框">图像边框</h4>
+<p>Border属性</p>
+<p>CSS：border</p>
+<p>Border-style: line-style</p>
+<p>Border-color</p>
+<h4 id="半透明显示">半透明显示</h4>
+<p>Opacity(0-1值) 1不透明 0 完全透明</p>
+<p>水印：绝对定位之后半透明显示</p>
+<h4 id="圆形图像">圆形图像</h4>
+<p>Border-radius</p>
+<h4 id="阴影图像">阴影图像</h4>
+<p>Box-shadow</p>
+<h3 id="图像背景">图像背景</h3>
+<h4 id="定义背景图像">定义背景图像</h4>
+<p>Background-image</p>
+<p>Background-repeat</p>
+<h4 id="背景原点位置和裁剪">背景原点、位置和裁剪</h4>
+<p>Background-position</p>
+<p>Background-origin</p>
+<p>Background-clip：背景图像可见区域（需要兼容）</p>
+<h4 id="控制大小">控制大小</h4>
+<p>Background-size:cover,content</p>
+<h4 id="固定显示">固定显示</h4>
+<p>Background-attachment</p>
+<h3 id="渐变背景">渐变背景</h3>
+<h4 id="线性渐变">线性渐变</h4>
+<p>Linear-gradient</p>
+<h4 id="重复线性渐变">重复线性渐变</h4>
+<p>Repeating-linear-gradient</p>
+<h4 id="径向渐变">径向渐变</h4>
+<p>Radial-gradient</p>
+<h4 id="重复径向渐变">重复径向渐变</h4>
+<h2 id="css超链接和列表">CSS超链接和列表</h2>
+<h3 id="超链接">超链接</h3>
+<h4 id="类型标识">类型标识</h4>
+<h4 id="工具提示">工具提示</h4>
+<h4 id="图形化按钮">图形化按钮</h4>
+<h3 id="导航菜单">导航菜单</h3>
+<h4 id="堆叠导航条">堆叠导航条</h4>
+<h4 id="水平导航条">水平导航条</h4>
+<h4 id="水平自适应">水平自适应</h4>
+<h4 id="垂直自适应">垂直自适应</h4>
+<h3 id="列表栏目">列表栏目</h3>
+<h4 id="tab选项面板">Tab选项面板</h4>
+<h4 id="图片预览">图片预览</h4>
+<h2 id="css动画">CSS动画</h2>
+<h3 id="变形">变形</h3>
+<h4 id="定义2d变形">定义2D变形</h4>
+<h4 id="定义3d变形">定义3D变形</h4>
+<h3 id="过渡动画">过渡动画</h3>
+<h4 id="光标移过动画">光标移过动画</h4>
+<h4 id="激活动画">激活动画</h4>
+<h4 id="焦点动画">焦点动画</h4>
+<h4 id="选择动画">选择动画</h4>
+<h4 id="目标动画">目标动画</h4>
+<h4 id="响应式动画">响应式动画</h4>
+<h4 id="事件动画">事件动画</h4>
+<h4 id="帧动画">帧动画</h4>
+<h4 id="定义关键帧">定义关键帧</h4>
+<h4 id="定义帧动画">定义帧动画</h4>
+<h2 id="12javascript基础">12.Javascript基础</h2>
+<h3 id="121-简单介绍">12.1 简单介绍</h3>
+<h3 id="122-变量">12.2 变量</h3>
+<h4 id="声明变量">声明变量</h4>
+<h4 id="变量赋值">变量赋值</h4>
+<h4 id="变量作用域">变量作用域</h4>
+<h4 id="全局变量">全局变量</h4>
+<h3 id="123-数据类型">12.3 数据类型</h3>
+<h3 id="124-类型转换">12.4 类型转换</h3>
+<h3 id="125-基本运算">12.5 基本运算</h3>
+<h4 id="算术运算">算术运算</h4>
+<h4 id="逻辑运算">逻辑运算</h4>
+<h4 id="关系运算">关系运算</h4>
+<h4 id="赋值运算">赋值运算</h4>
+<h3 id="126-程序结构">12.6 程序结构</h3>
+<h4 id="if">if</h4>
+<h4 id="else">else</h4>
+<h4 id="switch">switch</h4>
+<h4 id="default">default</h4>
+<h4 id="while">while</h4>
+<h4 id="dowhile">do/while</h4>
+<h4 id="for">for</h4>
+<h4 id="forin">for/in</h4>
+<h4 id="label-break">label break</h4>
+<h4 id="continue">continue</h4>
+<h4 id="trycatchfinally">try/catch/finally</h4>
+<h4 id="throw">throw</h4>
+<h3 id="127-数组">12.7 数组</h3>
+<h4 id="for-1">for</h4>
+<h4 id="foreach">forEach</h4>
+<h4 id="keys">keys</h4>
+<h4 id="栈操作">栈操作</h4>
+<h4 id="队列炒作">队列炒作</h4>
+<h4 id="删除元素">删除元素</h4>
+<h4 id="添加元素">添加元素</h4>
+<h4 id="截取数组">截取数组</h4>
+<h4 id="数组排序">数组排序</h4>
+<h4 id="数组转换">数组转换</h4>
+<h4 id="元素定位">元素定位</h4>
+<h4 id="检测数组">检测数组</h4>
+<h4 id="遍历数组">遍历数组</h4>
+<h2 id="13bom-dom操作">13.BOM 、DOM操作</h2>
+<h3 id="131-元素">13.1 元素</h3>
+<h2 id="14事件处理">14.事件处理</h2>
+<h2 id="15jquery">15.jQuery</h2>
+<h2 id="heading"></h2>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2022-03-24</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://tiankong98.github.io/post/javascript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+			Next<br>JavaScript学习笔记
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://tiankong98.github.io/post/html%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+			Previous<br>HTML学习笔记
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+            </div><div id="single-column-footer">
+
+  by <a>cilia</a>
+<br>
+  <a>小小星辰 无限乾坤</a>
+<br>
+  <a>1350865456@qq.com</a>
+<br>
+
+&copy;
+	
+	 cilia copyright.
+	
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script>
+    </body>
+</html>
